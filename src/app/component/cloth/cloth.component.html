@@ -1,0 +1,473 @@
+
+<app-nav></app-nav>
+
+
+<div class="w-100 head">
+  <img class="w-100" src="../../../assets/images/clothhome.jpg"  height="500" alt="">
+</div>
+<br><br><br>
+<h1 class="d-flex justify-content-center">Shop our collections</h1>
+<br>
+
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="Ladies">
+
+
+    <div class="scroll11">
+      <h1 class="d-flex justify-content-center">DinnerGowns</h1>
+      <div class="d-flex scroll m-3"  >
+
+        <div class="container" *ngFor="let item of dinnergown; let i=index;">
+
+    <div class="card" style="width:300px; height: 450px;  ">
+
+      <img class="card-img-top"  height="320" alt="Card image"  *ngIf="image!='' "
+       alt="" src={{item.img}} >
+      <div class="card-body">
+
+
+        <p class="card-text">{{item.name}}</p>
+
+      <div class="d-flex justify-content-between">
+        <div>
+        <strong>{{item.amount}}</strong>
+        </div>
+        <!-- <div *ngIf="!(service.who=='Admin')">
+          <i (click)="chang(i)" class="fa {{item.done == 'true' ? ('fa-solid fa-heart text-danger'):'fa-regular fa-heart '}}" style="font-size: 20px;" ></i>
+        </div> -->
+      </div>
+    <div class="d-flex justify-content-around" *ngIf="!(service.who=='Admin')">
+  <button class="btn btn-primary" (click)="cart(i)">Add to Cart</button>
+   </div>
+
+ <div *ngIf="(service.who=='Admin')">
+  <div class="d-flex justify-content-around">
+    <div>
+      <button class="btn btn-danger" (click)="dele(i)">del</button>
+    </div>
+    <div>
+      <button class="btn btn-primary" (click)="edit(i)">edit</button>
+    </div>
+  </div>
+ </div>
+
+      </div>
+    </div>
+   </div>
+    </div>
+    </div>
+    <div class="scroll11">
+      <h1 class="d-flex justify-content-center">CasualGowns</h1>
+      <div class="d-flex scroll m-3"  >
+        <div class="container" *ngFor="let item of casualF; let i=index;">
+    <div class="card" style="width:300px; height: 450px;  ">
+
+      <img class="card-img-top"  height="320" alt="Card image"  *ngIf="image!='' "
+       alt="" src={{item.img}} >
+      <div class="card-body">
+
+
+        <p class="card-text">{{item.name}}</p>
+        <div class="d-flex justify-content-between">
+          <div>
+          <strong>{{item.amount}}</strong>
+          </div>
+          <div *ngIf="!(service.who=='Admin')">
+            <i (click)="chang(i)" class="fa {{item.done? 'fa-solid fa-heart text-danger':'fa-regular fa-heart '}}" style="font-size: 20px;" ></i>
+
+          </div>
+        </div>
+      <div class="d-flex justify-content-around" *ngIf="!(service.who=='Admin')">
+    <button class="btn btn-primary" (click)="cart(i)">Add to Cart</button>
+     </div>
+        <div *ngIf="(service.who=='Admin')">
+          <div class="d-flex justify-content-around">
+            <div>
+              <button class="btn btn-danger" (click)="dele(i)">del</button>
+            </div>
+            <div>
+              <button class="btn btn-primary" (click)="edit(i)">edit</button>
+            </div>
+          </div>
+         </div>
+      </div>
+    </div>
+   </div>
+    </div>
+    </div>
+    <div class="scroll11">
+      <h1 class="d-flex justify-content-center">Tops</h1>
+      <div class="d-flex scroll m-3"  >
+        <div class="container" *ngFor="let item of topsF; let i=index;">
+    <div class="card" style="width:300px; height: 450px;  ">
+
+      <img class="card-img-top"  height="320" alt="Card image"  *ngIf="image!='' "
+       alt="" src={{item.img}} >
+      <div class="card-body">
+
+
+        <p class="card-text">{{item.name}}</p>
+        <div class="d-flex justify-content-between">
+          <div>
+          <strong>{{item.amount}}</strong>
+          </div>
+          <div *ngIf="!(service.who=='Admin')">
+            <i (click)="chang(i)" class="fa {{item.done? 'fa-solid fa-heart text-danger':'fa-regular fa-heart '}}" style="font-size: 20px;" ></i>
+
+          </div>
+        </div>
+      <div class="d-flex justify-content-around" *ngIf="!(service.who=='Admin')">
+    <button class="btn btn-primary" (click)="cart(i)">Add to Cart</button>
+     </div>
+
+        <div *ngIf="(service.who=='Admin')">
+          <div class="d-flex justify-content-around">
+            <div>
+              <button class="btn btn-danger" (click)="dele(i)">del</button>
+            </div>
+            <div>
+              <button class="btn btn-primary" (click)="edit(i)">edit</button>
+            </div>
+          </div>
+         </div>
+      </div>
+    </div>
+   </div>
+    </div>
+    </div>
+    <div class="scroll11">
+      <h1 class="d-flex justify-content-center">Pants</h1>
+      <div class="d-flex scroll m-3"  >
+        <div class="container" *ngFor="let item of pantF; let i=index;">
+    <div class="card" style="width:300px; height: 450px;  ">
+
+      <img class="card-img-top"  height="320" alt="Card image"  *ngIf="image!='' "
+       alt="" src={{item.img}} >
+      <div class="card-body">
+
+
+        <p class="card-text">{{item.name}}</p>
+        <div class="d-flex justify-content-between">
+          <div>
+          <strong>{{item.amount}}</strong>
+          </div>
+          <div *ngIf="!(service.who=='Admin')">
+            <i (click)="chang(i)" class="fa {{item.done? 'fa-solid fa-heart text-danger':'fa-regular fa-heart '}}" style="font-size: 20px;" ></i>
+
+          </div>
+        </div>
+      <div class="d-flex justify-content-around" *ngIf="!(service.who=='Admin')">
+    <button class="btn btn-primary" (click)="cart(i)">Add to Cart</button>
+     </div>
+
+        <div *ngIf="(service.who=='Admin')">
+          <div class="d-flex justify-content-around">
+            <div>
+              <button class="btn btn-danger" (click)="dele(i)">del</button>
+            </div>
+            <div>
+              <button class="btn btn-primary" (click)="edit(i)">edit</button>
+            </div>
+          </div>
+         </div>
+      </div>
+    </div>
+   </div>
+    </div>
+    </div>
+    <div class="scroll11">
+      <h1 class="d-flex justify-content-center">Skirts</h1>
+      <div class="d-flex scroll m-3"  >
+        <div class="container" *ngFor="let item of skirt; let i=index;">
+    <div class="card" style="width:300px; height: 450px;  ">
+
+      <img class="card-img-top"  height="320" alt="Card image"  *ngIf="image!='' "
+       alt="" src={{item.img}} >
+      <div class="card-body">
+
+
+        <p class="card-text">{{item.name}}</p>
+        <div class="d-flex justify-content-between">
+          <div>
+          <strong>{{item.amount}}</strong>
+          </div>
+          <div *ngIf="!(service.who=='Admin')">
+            <i (click)="chang(i)" class="fa {{item.done? 'fa-solid fa-heart text-danger':'fa-regular fa-heart '}}" style="font-size: 20px;" ></i>
+
+          </div>
+        </div>
+      <div class="d-flex justify-content-around" *ngIf="!(service.who=='Admin')">
+    <button class="btn btn-primary" (click)="cart(i)">Add to Cart</button>
+     </div>
+        <div *ngIf="(service.who=='Admin')">
+          <div class="d-flex justify-content-around">
+            <div>
+              <button class="btn btn-danger" (click)="dele(i)">del</button>
+            </div>
+            <div>
+              <button class="btn btn-primary" (click)="edit(i)">edit</button>
+            </div>
+          </div>
+         </div>
+      </div>
+    </div>
+   </div>
+    </div>
+    </div>
+    <div class="scroll11">
+      <h1 class="d-flex justify-content-center">Demin</h1>
+      <div class="d-flex scroll m-3"  >
+        <div class="container" *ngFor="let item of deminF; let i=index;">
+    <div class="card" style="width:300px; height: 450px;  ">
+
+      <img class="card-img-top"  height="320" alt="Card image"  *ngIf="image!='' "
+       alt="" src={{item.img}} >
+      <div class="card-body">
+
+
+        <p class="card-text">{{item.name}}</p>
+        <div class="d-flex justify-content-between">
+          <div>
+          <strong>{{item.amount}}</strong>
+          </div>
+          <div *ngIf="!(service.who=='Admin')">
+            <i (click)="chang(i)" class="fa {{item.done? 'fa-solid fa-heart text-danger':'fa-regular fa-heart '}}" style="font-size: 20px;" ></i>
+
+          </div>
+        </div>
+      <div class="d-flex justify-content-around" *ngIf="!(service.who=='Admin')">
+    <button class="btn btn-primary" (click)="cart(i)">Add to Cart</button>
+     </div>
+        <div *ngIf="(service.who=='Admin')">
+          <div class="d-flex justify-content-around">
+            <div>
+              <button class="btn btn-danger" (click)="dele(i)">del</button>
+            </div>
+            <div>
+              <button class="btn btn-primary" (click)="edit(i)">edit</button>
+            </div>
+          </div>
+         </div>
+      </div>
+    </div>
+   </div>
+    </div>
+    </div>
+
+
+  </mat-tab>
+  <mat-tab label="GentleMen">
+     <div class="scroll11">
+    <div class="d-flex scroll m-3"  >
+      <h1 class="d-flex justify-content-center">Coperate</h1>
+      <div class="container" *ngFor="let item of coperate; let i=index;">
+
+      <div class="card" style="width:300px; height: 450px;  ">
+
+        <img class="card-img-top"  height="320" alt="Card image"  *ngIf="image!='' "
+         alt="" src={{item.img}} >
+        <div class="card-body">
+
+
+          <p class="card-text">{{item.name}}</p>
+          <div class="d-flex justify-content-between">
+            <div>
+            <strong>{{item.amount}}</strong>
+            </div>
+            <div>
+              <i (click)="chang(i)" class="fa {{item.done? 'fa-solid fa-heart text-danger':'fa-regular fa-heart '}}" style="font-size: 20px;" ></i>
+
+            </div>
+          </div>
+          <div class="d-flex justify-content-around" *ngIf="(service.who=='User')">
+            <button class="btn btn-primary">Add to Cart</button>
+             </div>
+
+          <div *ngIf="(service.who=='Admin')">
+            <div class="d-flex justify-content-around">
+              <div>
+                <button class="btn btn-danger" (click)="dele(i)">del</button>
+              </div>
+              <div>
+                <button class="btn btn-primary" (click)="edit(i)">edit</button>
+              </div>
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+    <div class="d-flex scroll m-3"  >
+      <h1 class="d-flex justify-content-center">Casual</h1>
+      <div class="container" *ngFor="let item of casualM; let i=index;">
+
+      <div class="card" style="width:300px; height: 450px;  ">
+
+        <img class="card-img-top"  height="320" alt="Card image"  *ngIf="image!='' "
+         alt="" src={{item.img}} >
+        <div class="card-body">
+
+
+          <p class="card-text">{{item.name}}</p>
+          <div class="d-flex justify-content-between">
+            <div>
+            <strong>{{item.amount}}</strong>
+            </div>
+            <div>
+              <i (click)="chang(i)" class="fa {{item.done? 'fa-solid fa-heart text-danger':'fa-regular fa-heart '}}" style="font-size: 20px;" ></i>
+
+            </div>
+          </div>
+
+    <div class="d-flex justify-content-around">
+      <div>
+        <button class="btn btn-danger" (click)="dele(i)">del</button>
+      </div>
+      <div>
+        <button class="btn btn-primary" (click)="edit(i)">edit</button>
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+    <div class="d-flex scroll m-3"  >
+      <h1 class="d-flex justify-content-center">Shirt</h1>
+      <div class="container" *ngFor="let item of shirt; let i=index;">
+
+      <div class="card" style="width:300px; height: 450px;  ">
+
+        <img class="card-img-top"  height="320" alt="Card image"  *ngIf="image!='' "
+         alt="" src={{item.img}} >
+        <div class="card-body">
+
+
+          <p class="card-text">{{item.name}}</p>
+          <div class="d-flex justify-content-between">
+            <div>
+            <strong>{{item.amount}}</strong>
+            </div>
+            <div>
+              <i (click)="chang(i)" class="fa {{item.done? 'fa-solid fa-heart text-danger':'fa-regular fa-heart '}}" style="font-size: 20px;" ></i>
+
+            </div>
+          </div>
+          <div class="d-flex justify-content-around" *ngIf="(service.who=='User')">
+            <button class="btn btn-primary">Add to Cart</button>
+             </div>
+          <div *ngIf="(service.who=='Admin')">
+            <div class="d-flex justify-content-around">
+              <div>
+                <button class="btn btn-danger" (click)="dele(i)">del</button>
+              </div>
+              <div>
+                <button class="btn btn-primary" (click)="edit(i)">edit</button>
+              </div>
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+    <div class="d-flex scroll m-3"  >
+      <h1 class="d-flex justify-content-center">Pant</h1>
+      <div class="container" *ngFor="let item of pantM; let i=index;">
+
+      <div class="card" style="width:300px; height: 450px;  ">
+
+        <img class="card-img-top"  height="320" alt="Card image"  *ngIf="image!='' "
+         alt="" src={{item.img}} >
+        <div class="card-body">
+
+
+          <p class="card-text">{{item.name}}</p>
+          <div class="d-flex justify-content-between">
+            <div>
+            <strong>{{item.amount}}</strong>
+            </div>
+            <div>
+              <i (click)="chang(i)" class="fa {{item.done? 'fa-solid fa-heart text-danger':'fa-regular fa-heart '}}" style="font-size: 20px;" ></i>
+
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-around" *ngIf="(service.who=='User')">
+            <button class="btn btn-primary">Add to Cart</button>
+             </div>
+
+          <div *ngIf="(service.who=='Admin')">
+            <div class="d-flex justify-content-around">
+              <div>
+                <button class="btn btn-danger" (click)="dele(i)">del</button>
+              </div>
+              <div>
+                <button class="btn btn-primary" (click)="edit(i)">edit</button>
+              </div>
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+    <div class="d-flex scroll m-3"  >
+      <h1 class="d-flex justify-content-center">Demin</h1>
+      <div class="container" *ngFor="let item of deminM; let i=index;">
+
+      <div class="card" style="width:300px; height: 450px;  ">
+
+        <img class="card-img-top"  height="320" alt="Card image"  *ngIf="image!='' "
+         alt="" src={{item.img}} >
+        <div class="card-body">
+
+
+          <p class="card-text">{{item.name}}</p>
+          <div class="d-flex justify-content-between">
+            <div>
+            <strong>{{item.amount}}</strong>
+            </div>
+            <div>
+              <i (click)="chang(i)" class="fa {{item.done? 'fa-solid fa-heart text-danger':'fa-regular fa-heart '}}" style="font-size: 20px;" ></i>
+
+            </div>
+          </div>
+          <div class="d-flex justify-content-around" *ngIf="(service.who=='User')">
+            <button class="btn btn-primary">Add to Cart</button>
+             </div>
+
+          <div *ngIf="(service.who=='Admin')">
+            <div class="d-flex justify-content-around">
+              <div>
+                <button class="btn btn-danger" (click)="dele(i)">del</button>
+              </div>
+              <div>
+                <button class="btn btn-primary" (click)="edit(i)">edit</button>
+              </div>
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+  </div></mat-tab>
+
+</mat-tab-group>
+
+
+
+
+<app-foot></app-foot>

@@ -1,0 +1,40 @@
+
+<app-nav></app-nav>
+
+
+
+  <div class="p-5  house d-flex" >
+    <div class=" rounds rounded shadow">
+      <div class="w-100 account p-3 ">
+  <i class="fa fa-user-o mr-4" style="font-size: 20px;"></i>
+Admin Account
+      </div>
+      <div routerLink="admin/profile" class="w-100 user p-3 ">
+        <!-- <i class="fa fa-list-ul  mr-4" style="font-size: 20px;"></i> -->
+        <li >Profile</li>
+            </div>
+      <div class="w-100 user p-3 ">
+  <!-- <i class="fa fa-list-ul  mr-4" style="font-size: 20px;"></i> -->
+  <li routerLink="admin/post">Posting</li>
+      </div>
+      <div  routerLink="admin/user" class="w-100 user p-3 ">
+  <!-- <i class="fa fa-envelope-o  mr-4" style="font-size: 20px;"></i> -->
+  <li>Users</li>
+      </div>
+      <!-- <div class="w-100 user p-3 "> -->
+  <!-- <i class="fa fa-envelope-o  mr-4" style="font-size: 20px;"></i> -->
+  <!-- <li>
+        <button (click)="changes()">change</button>
+       </li> -->
+      <!-- </div> -->
+
+
+
+    </div>
+
+    <div class="rounding ml-3 rounded">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <app-foot></app-foot>
+

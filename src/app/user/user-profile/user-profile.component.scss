@@ -1,0 +1,37 @@
+// .users{
+//   padding-left: 10%;
+//   padding-right: 10%;
+// .circle{
+//   width: 150px;
+//   height: 150px;
+//   border:1px solid black;
+//   border-radius:100%;
+// }
+// }
+.house{
+  background-color:#F5F5F5 ;
+  .rounds{
+    height:80vh;
+    background-color: white;
+    width: 20%;
+    .account{
+      background-color:white;
+      border-bottom: 1px solid #EDEDED;
+      &:hover{
+        background-color: #F5F5F5;
+      }
+    }
+    .user{
+      background-color:white ;
+      &:hover{
+        background-color: #F5F5F5;
+      }
+    }
+  }
+  .rounding{
+    width: 75%;
+    height:80vh;
+    background-color: white;
+  }
+
+}

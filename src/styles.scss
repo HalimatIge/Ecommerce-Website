@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+@font-face {
+  font-family: outfitbold !important;
+  src: url(./assets/font/static/Outfit-Bold.ttf);
+}
+
+@font-face {
+  font-family: outfitblack;
+  src: url(./assets/font/static/Outfit-Black.ttf);
+}
+@font-face {
+  font-family: outfitreg;
+  src: url(./assets/font/static/Outfit-Regular.ttf);
+}
+@font-face {
+  font-family: outfitsbold;
+  src: url(./assets/font/static/Outfit-SemiBold.ttf);
+}
+@font-face {
+  font-family: outfitthin;
+  src: url(./assets/font/static/Outfit-Thin.ttf);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

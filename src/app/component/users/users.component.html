@@ -1,0 +1,16 @@
+
+<table class="table w-1oo table-stripe ">
+  <tbody>
+    <tr *ngFor="let item of usas; let i=index;">
+      <td>{{i+1}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.phone}}</td>
+      <td>{{item.mail}}</td>
+      <td>{{item.password}}</td>
+      <td>
+        <button class="btn btn-danger" (click)="del(i)">del</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+

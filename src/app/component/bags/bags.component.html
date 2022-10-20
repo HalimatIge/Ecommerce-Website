@@ -1,0 +1,47 @@
+<app-nav></app-nav>
+<div class="w-100 head">
+  <img class="w-100" src="../../../assets/images/bagpage.jpg"  height="500" alt="">
+</div>
+<h1 class= " d-flex justify-content-center mt-5 ">Handbag Heaven</h1>
+<div class="bag w-100">
+<div class=" bagloop  " *ngFor="let item of baglist; let i=index;"   >
+
+  <div class="card">
+
+    <img class="card-img-top"  height="320" alt="Card image"  *ngIf="image!='' "
+     alt="" src={{item.img}} >
+    <div class="card-body">
+      <p class="card-text">{{item.name}}</p>
+      <div class="d-flex justify-content-between">
+        <div>
+        <strong>{{item.amount | currency:'$'}}</strong>
+        </div>
+        <!-- <div  *ngIf="!(service.who=='Admin')">
+          <i (click)="chang(i)" class="fa {{item.done? 'fa-solid fa-heart text-danger':'fa-regular fa-heart '}}" style="font-size: 20px;" ></i>
+        </div> -->
+      </div>
+      <div class="d-flex justify-content-around" *ngIf="!(service.who=='Admin')">
+        <button class="btn btn-primary" (click)="cart(i)">Add to Cart</button>
+         </div>
+         <div *ngIf="(service.who=='Admin')">
+          <div class="d-flex justify-content-around">
+            <div>
+              <button class="btn btn-danger" (click)="dele(i)">del</button>
+            </div>
+            <div>
+              <button class="btn btn-primary" (click)="edit(i)">edit</button>
+            </div>
+          </div>
+         </div>
+
+    </div>
+  </div>
+  <br>
+</div>
+</div>
+
+
+
+
+
+<app-foot></app-foot>

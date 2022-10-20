@@ -1,0 +1,95 @@
+<nav class="navbar navbar-expand-md  navbar-light">
+  <a class="navbar-brand" href="#">D'Elite</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+ <div class="d-flex justify-content-between">
+  <ul class="navbar-nav">
+    <li class="nav-item" >
+     <a class="nav-link" routerLink="/cloth">Cloths</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/bags">Bags</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/perfume">Perfumes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/shoes">Footwears</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/access">Accessories</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/admin">Admin</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/wish">Wish</a>
+    </li>
+
+  </ul>
+ </div>
+  </div>
+
+
+  <div class="d-flex justify-content-end end">
+    <div>
+      <input type="search" name="" id="" class="form-control input" placeholder="Search our store" width="">
+    </div>
+
+        <button class=" mt-1 mr-2 ml-2">
+          <i class="fa fa-search" (click)="search()"></i>
+        </button>
+
+        <button routerLink="/cart" class=" mt-1 mr-2 ml-2">
+          <i class="fa fa-shopping-bag"></i>
+        </button>
+
+      <button class=" mt-1 mr-2 ml-2" (click)="show()" >
+    <i class="fa fa-user"></i>
+
+    <div class="  pt-2 pb-2 press shadow" *ngIf="press">
+     <ul>
+
+      <li class="nav-item" *ngIf="service.who=='Admin'">
+       <a class="nav-link" routerLink="/admin" >
+          <i class="fa fa-user"></i>
+          Admin</a>
+      </li>
+      <li class="nav-item" *ngIf="service.who=='User'">
+        <a class="nav-link" routerLink="/user" >
+          <i class="fa fa-user"></i> ??
+          </a>
+      </li>
+
+      <li *ngIf="guard == false">
+        <a routerLink="/login">
+          <i class="fa fa-lock"></i>
+          Sign In
+        </a>
+      </li>
+      <li *ngIf="guard == false">
+        <a routerLink="/signup">
+          <i class="fa fa-user"></i>
+          Register
+        </a>
+      </li>
+      <li>
+        <a routerLink="" (click)="check()" *ngIf="">
+          <i class="fa fa-check"></i>
+          Checkout
+        </a>
+      </li>
+      <li>
+        <a routerLink="/wish">
+          <i class="fa fa-regular fa-heart"></i>
+          Wishlist
+        </a>
+      </li>
+     </ul>
+    </div>
+
+       </button>
+    </div>
+</nav>

@@ -1,0 +1,16 @@
+html,body{
+  width: 100% !important;
+  box-sizing: border-box;
+}
+.scroll11{
+  flex-wrap: wrap;
+
+  .scroll{
+    overflow-x: scroll;
+    // scrollbar-width: thin;
+     scrollbar-width: none !important;
+  }
+
+}
+
+

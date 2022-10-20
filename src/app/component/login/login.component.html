@@ -1,0 +1,45 @@
+<app-nav></app-nav>
+<div class="card p-5 container shadow m-auto w-50  cont " >
+
+ <div class=" sign">
+  Sign in to continue
+ </div>
+  <br>
+  <br>
+  <form action="" novalidate (ngSubmit)="submit()" [formGroup]="formData">
+
+    <div class="form-group">
+        <mat-form-field appearance="outline" class="w-100 ">
+          <mat-label >Enter your E-mail Address</mat-label>
+        <input  matInput type="text" formControlName="email" placeholder="Email Address" >
+        </mat-form-field> <br>
+      <small *ngIf="email?.invalid && email?.touched" class="text-danger">Enter a valid Email</small>
+    </div>
+
+    <div class="form-group">
+        <mat-form-field appearance="outline" class="w-100 ">
+          <mat-label >Enter your Password</mat-label>
+
+        <div class="d-flex">
+          <input matInput [type]="type"  formControlName="password" placeholder="Password">
+          <i class="fa fa-eye  mr-3" (click)="change()"></i>
+         </div>
+        </mat-form-field> <br>
+        <small *ngIf="password?.invalid && password?.touched" class="text-danger">Enter your Password</small>
+    </div>
+    <h3 class="text-danger" *ngIf="incorrect">Password or Username incorrect</h3>
+    <div>
+      <span>
+        <a href="" class="" style="margin-left:70%;">Forgot Password?</a>
+      </span>
+    </div> <br>
+
+   <div class="d-flex justify-content-center ">
+    <button [disabled]="formData.invalid || submitted" class="btn  pl-5 pr-5" style="background-color:#3F51B5; color: white;">
+    <i class="fa fa-spin fa-spinner mr-3" *ngIf="submitted"></i>
+      <strong>Sign In</strong></button>
+   </div>
+  </form>
+
+</div>
+<app-foot></app-foot>

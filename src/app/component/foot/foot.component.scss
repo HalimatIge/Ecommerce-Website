@@ -1,0 +1,59 @@
+@font-face {
+  font-family: outfitbold !important;
+  src: url(../../../assets/font/static/Outfit-Bold.ttf);
+}
+@font-face {
+  font-family: outfitblack;
+  src: url(../../../assets/font/static/Outfit-Black.ttf);
+}
+@font-face {
+  font-family: outfitreg;
+  src: url(../../../assets/font/static/Outfit-Regular.ttf);
+}
+@font-face {
+  font-family: outfitsbold;
+  src: url(../../../assets/font/static/Outfit-SemiBold.ttf);
+}
+@font-face {
+  font-family: outfitthin;
+  src: url(../../../assets/font/static/Outfit-Thin.ttf);
+}
+.foot{
+  background-color:#F7F8FA ;
+  .support{
+    font-weight: 500;
+    font-size: 16px;
+    font-family: outfitblack,outfitsbold;
+    line-height: 26px;
+    color: #191919;
+    ul{
+      margin-left: -35px;
+      list-style-type: none;
+      li{
+        margin-top: 7%;
+        a{
+          color: #888888;
+          font-weight: 300;
+          font-size: 14px;
+          font-family: outfitsbold;
+          line-height: 22px;
+
+          &:hover{
+            color: #A077A1;
+          }
+          }
+      }
+    }
+  }
+
+}
+.foot1{
+  .right{
+    margin-left: 20%;
+    font-weight: 300;
+    color: rgb(133, 127, 127);
+    font-size: 14px;
+    font-family: sans-serif;
+    line-height: 22px;
+  }
+}

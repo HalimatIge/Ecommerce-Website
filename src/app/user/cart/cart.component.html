@@ -1,0 +1,122 @@
+<app-nav></app-nav>
+
+<h1 class="d-flex justify-content-center mt-4 mb-5">SHOPPING CART</h1>
+<div>
+
+  <!-- *ngFor="let item of cart" -->
+
+<div class="d-flex justify-content-center w-100">
+  <table class="table table-stripe ">
+    <tbody class=""  style="height:max-content;">
+      <tr *ngFor="let item of cartting;let i=index"  style="height:max-content;">
+        <td style="height:max-content;">
+          <div class="image">
+            <img src="{{item.img}}" alt="">
+           </div>
+        </td>
+        <td class="show">
+
+          <div class="title">
+            <h3>
+           <div>
+          {{item.name}}
+           </div>
+
+          </h3>
+          </div>
+          <ul>
+            <li>
+              <div class="price ">
+              {{item.amount}}
+              </div>
+            </li>
+            <li>
+              <div>
+                <div class=" counter">
+                  <span class="fa fa-minus"></span>
+                  <span class="ml-4 mr-4">{{put}}</span>
+                  <span class="fa fa-plus"></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="subtotalprice ">
+                {{item.subtotal}}
+              </div>
+            </li>
+          </ul>
+        </td>
+        <td class="hide">
+
+          <div class="title">
+            <h3>
+           <div>
+          {{item.name}}
+           </div>
+
+          </h3>
+          </div>
+        </td>
+        <td class="hide">
+          <div class="price d-flex justify-content-center align-items-center">
+          {{item.amount}}
+          </div>
+        </td>
+        <td class="hide">
+          <div>
+            <div class="d-flex justify-content-center align-items-center counter" >
+              <span class="fa fa-minus" (click)="minus(i)"></span>
+              <span class="ml-4 mr-4">{{item.no}}</span>
+              <span class="fa fa-plus" (click)="plus(i)"></span>
+            </div>
+          </div>
+        </td>
+        <td class="hide">
+          <div class="subtotalprice d-flex justify-content-center align-items-center">
+          {{item.subtotal}}
+          </div>
+        </td>
+        <td >
+         <div (click)="trash(i)">
+          <i class="fa fa-trash trash mt-3"></i>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class=" total border mb-5 mt-5 mx-auto">
+  <div >
+    <div class="d-flex justify-content-around mt-5">
+      <h2>GRAND TOTAL</h2>
+      <h2>{{grand | currency:'$'}}</h2>
+    </div>
+<button class="btn btn-primary mb-5"><span>PROCEED TO CHECKOUT</span></button>
+    </div>
+</div>
+<!-- <div class="card" style="width:300px; height: 450px;  ">
+
+    <img class="card-img-top"  height="320" alt="Card image"  *ngIf="image!='' "
+     alt="" src={{item.img}} >
+    <div class="card-body">
+      <p class="card-text">{{item.name}}</p>
+        <div class="d-flex justify-content-between">
+        <div>
+        <strong>{{item.amount}}</strong>
+        </div>
+        <div>
+          <i (click)="chang(i)" class="fa {{item.done? 'fa-solid fa-heart text-danger':'fa-regular fa-heart '}}" style="font-size: 20px;" ></i>
+
+        </div>
+      </div>
+
+<div class="d-flex justify-content-center">
+  <button class="btn btn-primary">Add to Cart</button>
+
+  </div>
+  </div>
+  </div> -->
+
+</div>
+<app-foot></app-foot>

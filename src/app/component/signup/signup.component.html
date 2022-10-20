@@ -1,0 +1,84 @@
+<app-nav></app-nav>
+
+<div  class="card p-5 container shadow m-auto w-50">
+  <h4>Create a Free Account</h4>
+  <small>Open your own account and start on a payment plan for your appliances</small><br>
+<form action="" novalidate (ngSubmit)="submit()" [formGroup]="formData">
+
+<div class="form-group">
+  <mat-form-field appearance="outline" class="w-100 ">
+    <mat-label >Enter your first name</mat-label>
+    <input matInput type="text"  placeholder="Firstname" formControlName="name" >
+  </mat-form-field> <br>
+  <small class="text-danger" *ngIf="name?.invalid && name?.touched">Kindly input your firstname!</small>
+</div>
+
+<div class="form-group">
+  <mat-form-field appearance="outline" class="w-100 ">
+    <mat-label >Enter your last name</mat-label>
+    <input matInput type="text"  placeholder="Lastname"  formControlName="lname" >
+  </mat-form-field> <br>
+  <small class="text-danger" *ngIf="lname?.invalid && lname?.touched">Kindly input your Lastname!</small>
+</div>
+
+<div class="form-group">
+
+  <mat-form-field appearance="outline" class="w-100 ">
+    <mat-label >Enter your phone number</mat-label>
+    <input matInput type="text"  placeholder="Enter your phone number" formControlName="number" >
+  </mat-form-field> <br>
+  <small class="text-danger" *ngIf="number?.invalid && number?.touched">Kindly input your Phone numbernin local format</small>
+</div>
+
+<div class="form-group">
+  <mat-form-field appearance="outline" class="w-100 ">
+    <mat-label >Enter your E-mail Address</mat-label>
+    <input matInput type="text"  placeholder="Enter your email address" formControlName="email" >
+  </mat-form-field> <br>
+  <small class="text-danger" *ngIf="email?.invalid && email?.touched">input a valid email address!</small>
+  <small class="text-danger" *ngIf="emailmatch" >Email Address already  exist </small>
+</div>
+<div class="form-group">
+  <mat-form-field appearance="outline" class="w-100 ">
+    <mat-label >Create a password</mat-label>
+    <div class="d-flex">
+      <input matInput [type]="type"  placeholder="Create a password" formControlName="password" >
+      <i (click)="change()" class="fa fa-eye  mr-3"></i>
+    </div>
+
+  </mat-form-field> <br>
+  <small class="text-danger" *ngIf="password?.invalid && password?.touched">passwords must have at least 8 and at most 16 characters</small>
+</div>
+<div class="form-group">
+  <mat-form-field appearance="outline" class="w-100 ">
+    <mat-label >Confirm your Password</mat-label>
+    <input matInput type="text"  placeholder="Confirm your password" formControlName="cPass">
+  </mat-form-field> <br>
+  <small class="text-danger" *ngIf="cPass?.invalid && cPass?.touched">Confirm your Password</small>
+  <small class="text-danger" *ngIf="passwordmatch">Password does not match</small>
+</div>
+<div class="text-success" *ngIf="success">SignUp Successful</div>
+    <div>
+      <div class="d-flex justify-content-center">
+        <input type="checkbox" class="mr-2">
+        <span class="mt-1">I accept D'Elite <a href="">Terms and conditions</a></span>
+      </div>
+  </div>
+  <br>
+  <div class="d-flex justify-content-center">
+    <button [disabled]="formData.invalid" class="btn pl-5 pr-5" style="background-color:#9661FF;">
+      <i class="fa fa-spin fa-spinner mr-3" *ngIf="submitted"></i>
+      <strong>SIGN UP</strong></button>
+  </div>
+  <br>
+
+  <div class="d-flex justify-content-center" >
+    <h5>Have an account? <a routerLink="login">Login</a></h5>
+  </div>
+
+
+</form>
+</div>
+
+
+<app-foot></app-foot>

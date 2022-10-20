@@ -1,0 +1,42 @@
+
+  <div class="col-10">
+    <div class="admin w-25 m-5">
+
+
+      <input type="file" alt="" (change)="fileEvent($event)" name="myfile" ><br><br>
+      <label for="">Category</label><br>
+      <select name=""  class="w-50" [(ngModel)]="message">
+        <option value="Bag">Bag</option>
+        <option value="Cloth">Cloth</option>
+        <option value="Perfume">Perfume</option>
+        <option value="Accessories">Accessories</option>
+        <option value="Footwear">Footwear</option>
+      </select><br><br>
+      <label for="">Category1</label> <br>
+      <select name="" id="" [(ngModel)]="select">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select><br><br>
+      <select name="" id="" [(ngModel)]="selectAgain">
+        <option value="dinner">Dinnergown</option>
+        <option value="casual">Casualgowns</option>
+        <option value="tops">Blouse</option>
+        <option value="skirt">Skirt</option>
+        <option value="fpant">fPant</option>
+        <option value="demin">fdemin</option>
+        <option value="mpant">mPant</option>
+        <option value="mdemin">mdemin</option>
+        <option value="coperate">coperate</option>
+        <option value="shirt">Shirt</option>
+      </select><br><br>
+      <textarea name="" id="" cols="25" rows="5"   [(ngModel)]="message1">
+
+      </textarea>
+      <textarea cols="25" rows="1" [(ngModel)]="message2"></textarea>
+      <br>
+
+
+      <button class="btn btn-primary" (click)="post()">post</button>
+    </div>
+
+  </div>
